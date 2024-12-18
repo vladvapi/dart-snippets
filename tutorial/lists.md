@@ -32,6 +32,7 @@
 7. **Sort a List**
 * Create a list of integers: [45, 3, 67, 1, 23].
 * Sort the list in ascending order and print it.
+* Sort the list in descending order and print it.
 
 8. **Filter a List**
 * Create a list of numbers: [2, 7, 10, 15, 18, 21].
