@@ -1,7 +1,7 @@
 # sets
 
 
-## Exercices
+## Exercises
 
 1. **Create and Print a Set**
 * Create a Set of integers: {1, 2, 3, 4, 5}.
