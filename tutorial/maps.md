@@ -4,7 +4,7 @@
 ## Exercises
 
 
-**1. Create and Print a Map**
+## **1. Create and Print a Map**
 * Create a `Map` where keys are country names and values are their capitals.
 * Print the `Map`.
 
