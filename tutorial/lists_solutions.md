@@ -57,3 +57,60 @@ void main() {
   }
 }
 ```
+
+6.
+```dart
+void main() {
+  List<int> numbers = [1, 2 ,3 , 4, 5];
+  
+  numbers = numbers.reversed.toList();
+  
+  print(numbers);
+}
+```
+
+7.
+```dart
+void main() {
+  List<int> numbers = [45, 3, 67, 1, 23];
+  
+  numbers.sort();
+  
+  print(numbers);
+  
+  numbers.sort((a,b) => -(a-b));
+  
+  print(numbers);
+}
+```
+
+8.
+```dart
+void main() {
+  List<int> numbers = [2, 7, 10, 15, 18, 21];
+  
+  numbers = numbers.where((nr) => nr > 10).toList();
+  
+  print(numbers);
+}
+```
+
+9.
+```dart
+void main() {
+  List<int> numbers = [1, 2, 3, 4];
+  
+  final doubles = numbers.map((a) => a * 2).toList();
+  
+  print(doubles);
+}
+```
+
+10.
+```dart
+void main() {
+  List<String> animals = ["cat", "dog", "bird", "fish"];
+  
+  print(animals.contains("dog"));
+}
+```
