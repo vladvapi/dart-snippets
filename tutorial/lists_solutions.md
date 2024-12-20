@@ -125,3 +125,47 @@ void main() {
   print(even);
 }
 ```
+
+12.
+```dart
+void main() {
+  final words = <String>["apple", "bat", "cherry", "dog", "elephant"];
+ 
+  final bigWords = words.where((e) => e.length > 3).toList();
+  
+  print(bigWords);
+}
+```
+
+13.
+```dart
+void main() {
+  final numbers = <int>[3, 6, 9, 12, 15, 18];
+ 
+  final div = numbers.firstWhere((nr) => nr % 4 == 0);
+  
+  print(div);
+}
+```
+
+14.
+```dart
+void main() {
+  List<int> numbers = [1, 2, 3, 4];
+  
+  final doubles = numbers.map((a) => a * a).toList();
+  
+  print(doubles);
+}
+```
+
+15.
+```dart
+void main() {
+  final numbers = <int>[10, 20, 30, 40, 50];
+ 
+  final sum = numbers.reduce((s, e) => s + e);
+  
+  print(sum);
+}
+```
