@@ -169,3 +169,66 @@ void main() {
   print(sum);
 }
 ```
+
+16.
+```dart
+void main() {
+  final fruits = <String>["grape", "apple", "banana", "kiwi", "cherry"];
+  
+  fruits.sort((a, b) => -(a.length.compareTo(b.length)));
+  
+//   or:
+//   fruits.sort((a, b) => b.length.compareTo(a.length));
+  
+  print(fruits);
+}
+```
+
+17.
+```dart
+void main() {
+  final numbers = <int>[2, 4, 6, 8, 10];
+  
+  final allEven = numbers.every((nr) => nr % 2 == 0);
+  
+  print(allEven);
+}
+```
+
+18.
+```dart
+void main() {
+  final numbers = <int>[3, 5, 7, 9, 12];
+  
+  final anyEven = numbers.any((nr) => nr % 2 == 0);
+  
+  print(anyEven);
+}
+```
+
+19.
+```dart
+void main() {
+  final numbers1 = <int>[1, 2, 3];
+  final numbers2 = <int>[4, 5, 6];
+  
+  final combinedList = [numbers1, numbers2].expand((list) => list).toList();
+//   or (simpler):
+//   final combinedList = [...numbers1, ...numbers2];
+  
+  print(combinedList);
+}
+```
+
+20.
+```dart
+import 'package:collection/collection.dart';
+
+void main() {
+  final words = <String>["bat", "cat", "ball", "apple", "ant"];
+  
+  final groups = groupBy(words, (s) => s[0]);
+  
+  print(groups);
+}
+```
