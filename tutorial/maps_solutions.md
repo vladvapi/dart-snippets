@@ -149,3 +149,94 @@ void main() {
 }
 ```
 
+11.
+```dart
+void main() {
+  final grades = <String, int>{"Charlie": 78, "Alice": 85, "Bob": 90};
+  
+  final keys = grades.keys.toList();
+  
+  keys.sort();
+  
+  for(final key in keys){
+    print("$key: ${grades[key]}");
+  }
+}
+```
+
+12.
+```dart
+void main() {
+  final grades = <String, double>{"notebook": 3.0, "pen": 1.5, "eraser": 0.5};
+  
+  final entries = grades.entries.toList();
+  
+  entries.sort((a, b) => a.value.compareTo(b.value));
+  
+  for(final entry in entries){
+    print("${entry.key}: ${entry.value}");
+  }
+}
+```
+
+13.
+```dart
+void main() {
+  final countries = <String, String>{"France": "Paris", "Italy": "Rome"};
+
+  countries.putIfAbsent("Germany", () => "Unknown");
+
+  print(countries["Germany"]);
+}
+```
+
+14.
+```dart
+void main() {
+  final names = <String, int>{"Alice": 85, "Bob": 90, "Charlie": 78};
+
+  final keys = names.keys.toList();
+  
+  print(keys);
+  
+  final values = names.values.toList();
+  
+  print(values);
+}
+```
+
+15.
+```dart
+void main() {
+  final items = <String, int>{"pens": 10, "notebooks": 15, "erasers": 5};
+
+  final res = items.values.every((nr) => nr > 4);
+  
+  print(res);
+}
+```
+
+16.
+```dart
+
+```
+
+17.
+```dart
+
+```
+
+18.
+```dart
+
+```
+
+19.
+```dart
+
+```
+
+20.
+```dart
+
+```
