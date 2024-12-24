@@ -104,3 +104,57 @@ void main() {
   print(fruits.contains("banana"));
 }
 ```
+
+11.
+```dart
+void main() {
+  final numbers = <int>{5, 10, 15, 20, 25};
+  
+  print(numbers.firstWhere((nr) => nr > 12));
+}
+```
+
+12.
+```dart
+void main() {
+  final numbers = <int>{1, 2, 3, 4, 5, 6};
+  
+  numbers.retainWhere((nr) => nr % 2 == 0);
+  
+  print(numbers);
+}
+```
+
+13.
+```dart
+void main() {
+  final fruits = <String>["apple", "banana", "apple", "cherry", "banana"];
+  
+  final fruitSet = fruits.toSet();
+  
+  print(fruitSet);
+}
+```
+
+14.
+```dart
+void main() {
+  final numbers = <int>{100, 200, 300};
+  
+  for(final nr in numbers){
+    print(nr);
+  }
+}
+```
+
+15.
+```dart
+void main() {
+  final numbers1 = <int> {1, 3, 5};
+  final numbers2 = <int> {2, 3, 6};
+  
+  final union = numbers1.union(numbers2);
+  
+  print(union);
+}
+```
