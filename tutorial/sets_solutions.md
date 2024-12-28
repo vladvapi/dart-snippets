@@ -161,25 +161,56 @@ void main() {
 
 16.
 ```dart
-
+void main() {
+  final colors = <String>{"red", "blue", "green"};
+  
+  final colorList = colors.toList();
+  
+  print(colorList);
+}
 ```
 
 17.
 ```dart
-
+void main() {
+  final numbers = <int>{5, 10, 15};
+  
+  final sum = numbers.reduce((a, b) => a + b);
+  
+  print(sum);
+}
 ```
 
 18.
 ```dart
-
+void main() {
+  final numbers = <int>{10, 20, 30, 40, 50};
+  
+  final max = numbers.reduce((v, e) => v > e ? v : e); // ternary operator
+  
+  print(max);
+}
 ```
 
 19.
 ```dart
-
+void main() {
+  final numbers1 = <int>{1, 2, 3, 4};
+  final numbers2 = <int>{3, 4, 5, 6};
+  
+  final difference = numbers1.difference(numbers2);
+  
+  print(difference);
+}
 ```
 
 20.
 ```dart
-
+void main() {
+  final numbers = <int>{2, 4, 6, 7, 8};
+  
+  final res = numbers.any((nr) => nr % 2 == 1);
+  
+  print(res);
+}
 ```
