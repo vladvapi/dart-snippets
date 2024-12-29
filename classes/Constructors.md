@@ -74,6 +74,7 @@ class Rectangle {
 Am definit tipul piont cu 2 date membre, coordonatele punctului, x si y.
 Am definit unnamed constructor care initializeaza x si y.
 In dart putem avea cel mult un unnamed constructor.
+
 Am mai definit doi named constructors `Point.origin` si `Point.unit`.
 Retine sintaxa cum am initializat x si y in acesti constructori.
 
