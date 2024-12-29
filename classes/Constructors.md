@@ -4,14 +4,6 @@
 import 'dart:math';
 
 void main() {
-  final p = Point(5, 3);
-  final o = Point.origin();
-  final u = Point.unit();
-
-  print(p);
-  print(o);
-  print(u);
-
   final rectangle = Rectangle(10, 12);
   final square = Rectangle.square(7);
 
@@ -48,6 +40,7 @@ class Triangle {
         side2 = leg2,
         side3 = sqrt(leg1 * leg1 + leg2 * leg2);
 
+  @override
   String toString() => "Triangle(side1: $side1, side2: $side2, side3: $side3)";
 }
 
@@ -58,6 +51,7 @@ class Circle {
   Circle.unit() : radius = 1;
   Circle.fromDiameter(double diameter) : radius = diameter / 2;
 
+  @override
   String toString() => "Circle(radius: $radius)";
 }
 
@@ -70,13 +64,35 @@ class Rectangle {
       : height = size,
         width = size;
 
+  @override
   String toString() => "Rectangle(width: $width, height: $height)";
+}
+
+
+```
+
+Am definit tipul piont cu 2 date membre, coordonatele punctului, x si y.
+Am definit unnamed constructor care initializeaza x si y.
+In dart putem avea cel mult un unnamed constructor.
+Am mai definit doi named constructors `Point.origin` si `Point.unit`.
+Retine sintaxa cum am initializat x si y in acesti constructori.
+
+```dart
+void main() {
+  final p = Point(5, 3);
+  final o = Point.origin();
+  final u = Point.unit();
+
+  print(p);
+  print(o);
+  print(u);
 }
 
 class Point {
   int x;
   int y;
 
+  // unnamed constructor
   Point(this.x, this.y);
   Point.origin()
       : x = 0,
@@ -85,6 +101,7 @@ class Point {
       : x = 1,
         y = 1;
 
+  @override
   String toString() => "Point(x: $x, y: $y)";
 }
 ```
