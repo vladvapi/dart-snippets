@@ -111,3 +111,52 @@ class Point {
   String toString() => "Point(x: $x, y: $y)";
 }
 ```
+
+## Positional optional arguments
+
+* Optional arguments se pun intotdeauna dupa required arguments.
+* Daca dau valoare pt un argument optional trebuie sa dau valoare pt toate argumentele pozitionale de dinainte. (ex: daca la person dau si grade trebuie neaparat sa pun si age)
+
+```dart
+void main() {
+  final p1 = Person("Alice", 25);
+  final p2 = Person("Bob");
+  
+  print(p1);
+  print(p2);
+}
+
+class Person {
+  String name;
+  int age;
+// int? age;
+  int? grade;
+  
+  Person(this.name, [this.age = 18, this.grade]);
+// Person(this.name, [this.age]);
+  
+  String toString() => "Person(name: $name, age: $age, grade: $grade)";
+}
+```
+
+## Named arguments (optional and required)
+
+```dart
+void main() {
+  final p1 = Person(name: "Alice",age: 25);
+  final p2 = Person(grade: 10, name: "Bob");
+  
+  print(p1);
+  print(p2);
+}
+
+class Person {
+  String name;
+  int age;
+  int? grade;
+  
+  Person({required this.name, this.age = 18, this.grade});
+  
+  String toString() => "Person(name: $name, age: $age, grade: $grade)";
+}
+```
